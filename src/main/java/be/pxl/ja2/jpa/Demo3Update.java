@@ -20,7 +20,7 @@ public class Demo3Update {
 			EntityTransaction tx = entityManager.getTransaction();
 			tx.begin();
 			query.setParameter("name", "Sophie");
-			Contact result = query.getSingleResult();
+			Contact result = query.getSingleResult(); // geeft 1 resultaat terug
 			System.out.println(result);
 			result.setPhone(999000);
 			tx.commit();

@@ -6,16 +6,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
+@Entity //deze objecten kunnen opgeslagen in databank
 @Table(name = "contacts")
 public class Contact {
-	@Id
+	@Id  //primary key
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private int phone;
 	private String email;
 
+	//altijd default constructor toevoegen
 	public Contact() {
 	}
 
